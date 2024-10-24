@@ -30,12 +30,14 @@ input[type="text"],textarea {
     margin-left: 1px;
 }
 textarea {
-    min-height: 40px;
+    min-height: 70px;
     max-width: 100%;
     max-height: 300px;
     overflow: hidden;
     resize: none;
     transition: width 0.2s ease;
+    overflow-y: auto;
+    overflow: auto;
 }
 input[type="text"]:focus,textarea:focus {
     outline: none;
