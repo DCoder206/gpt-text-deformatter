@@ -1,6 +1,7 @@
 # GPT Text Deformatter
 A tool designed to clean up responses from ChatGPT or other similar tools by removing unwanted formatting.
 
+
 # How to Use
 - Visit the site: Open GPT Text Deformatter.
 
