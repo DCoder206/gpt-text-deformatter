@@ -11,4 +11,4 @@ A tool designed to clean up responses from ChatGPT or other similar tools by rem
 
 - Copy the cleaned text: After cleaning, simply copy the new, deformatted text for your use.
 
-Access the site [here](https://dcoder206.github.io/gpt-text-deformatter/)
+Access the site [here](https://dcoder206.github.io/gpt-text-deformatter/src)
