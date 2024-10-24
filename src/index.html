@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./logo.png">
+        <link rel="stylesheet" href="./style.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>GPT DeFormatter</title>
+    </head>
+    <body>
+        <h1>GPT DeFormatter</h1>
+        <br>
+        <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <form>
+            <label for="response" style="margin-left: 1px;">Enter response below</label>
+            <!--<input type="text" id="inptext" placeholder="Enter text">-->
+            <textarea id="inptext" placeholder="Start typing..."></textarea>
+            <br>
+            <input type="submit" value="Clean" id="subbut">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="Copy" id="copybut">
+        </form>
+        <br><br>
+        <div id = "outp"></div>
+        <script src="./script.js"></script>
+    </body>
+</html>
