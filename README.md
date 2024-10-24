@@ -1,2 +1,2 @@
-# gpt-text-deformatter
+# GPT text deformatter
 A repository designed to clean up chatgpt/other tools' responses
