@@ -10,18 +10,19 @@
     </head>
     <body>
         <h1>GPT DeFormatter</h1>
+        <p>A tool designed to clean up formatted text typically found in ChatGPT and other such tools' responses. Simply paste your text into the input box, and click the "Deformat" button to see a plain version of your text. You can also copy the cleaned text to your clipboard<p>
         <br>
         <button id="darkModeToggle" aria-label="Toggle Dark Mode">
             <i class="fas fa-moon"></i>
         </button>
         <form>
-            <label for="response" style="margin-left: 1px;">Enter response below</label>
-            <!--<input type="text" id="inptext" placeholder="Enter text">-->
+            <label for="response" style="margin-left: 1px;">Enter response below:</label>
             <textarea id="inptext" placeholder="Start typing..."></textarea>
             <br>
-            <input type="submit" value="Clean" id="subbut">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="Copy" id="copybut">
+            <div class="buttons">
+                <input type="submit" value="DeFormat" id="subbut">
+                <input type="submit" value="Copy" id="copybut">
+            </div>
         </form>
         <br><br>
         <div id = "outp"></div>

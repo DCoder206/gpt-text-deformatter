@@ -5,7 +5,7 @@ h1,h4{
     color: #333;
     margin-left: 1px;
 }
-h1 {
+h1,p {
     text-align: center;
 }
 button {
@@ -15,6 +15,12 @@ button {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 296px;
+    width: 100%;
 }
 input[type="text"],textarea {
     width: 450px;

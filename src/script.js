@@ -1,5 +1,9 @@
 function respClean(resp) {
-    return resp.replace(/(#+|\*\*|__|\*|_|`|~)/g, "")
+    return resp
+            .replace(/(#+|\*\*|__|\*|_|`|~)/g, "").replace(/\\\[|\\\]/g, "")
+            .replace(/\$(.*?)\$/g, "$1")
+            .replace(/\\cdot/g, "⋅")
+            .replace(/\\text{([^}]+)}/g, "$1");
 }
 async function clipboardCopy(text) {
     try {
