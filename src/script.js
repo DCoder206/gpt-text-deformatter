@@ -1,9 +1,26 @@
 function respClean(resp) {
-    return resp
-            .replace(/(#+|\*\*|__|\*|_|`|~)/g, "").replace(/\\\[|\\\]/g, "")
-            .replace(/\$(.*?)\$/g, "$1")
-            .replace(/\\cdot/g, "⋅")
-            .replace(/\\text{([^}]+)}/g, "$1");
+    const replacements = [
+        [/(#+|\*\*|__|\*|_|`|~)/g, ""],
+        [/\\[{}\[\]]/g, ""],
+        [/\$(.*?)\$/g, "$1"],
+        [/\\cdot/g, "⋅"],
+        [/\\text{([^}]+)}/g, "$1"],
+        [/\\leq/g, "≤"], [/\\geq/g, "≥"], [/\\neq/g, "≠"],
+        [/\\approx/g, "≈"], [/\\infty/g, "∞"], [/\\pm/g, "±"],
+        [/\\times/g, "×"], [/\\rightarrow/g, "→"], [/\\leftarrow/g, "←"],
+        [/\\frac{([^}]+)}{([^}]+)}/g, "($1 / $2)"],
+        [/\\sqrt{([^}]+)}/g, "√($1)"],
+        [/\^{([^}]+)}/g, "^($1)"], [/\^([a-zA-Z0-9])/g, "^$1"],
+        [/_\{([^}]+)}/g, "_($1)"], [/_(\w)/g, "_$1"],
+        [/\\alpha/g, "α"], [/\\beta/g, "β"], [/\\gamma/g, "γ"],
+        [/\\delta/g, "δ"], [/\\epsilon/g, "ε"], [/\\theta/g, "θ"],
+        [/\\lambda/g, "λ"], [/\\mu/g, "μ"], [/\\pi/g, "π"],
+        [/\\sigma/g, "σ"], [/\\phi/g, "φ"], [/\\omega/g, "ω"]
+    ];
+    replacements.forEach(([pattern, replacement]) => {
+        resp = resp.replace(pattern, replacement);
+    });
+    return resp;
 }
 async function clipboardCopy(text) {
     try {
