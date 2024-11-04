@@ -44,7 +44,7 @@ subbut.addEventListener("click", (event) => {
     event.preventDefault();
     input = inpfield.value;
     if (Boolean(input)) {
-        outdiv.innerHTML = `Here's the deformatted text:<br><br>${respClean(input)}`;
+        outdiv.innerHTML = `Here's the deformatted text:<br><br>${respClean(input).replace(/\n/g,"<br>")}`;
     }
 })
 copybut.addEventListener("click", (event) => {
