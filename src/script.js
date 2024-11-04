@@ -1,6 +1,6 @@
 function respClean(resp) {
     const replacements = [
-        [/(#+|\*\*|__|\*|_||~)/g, ""],
+        [/#+|(\*\*|__|\*|_)/g, ""],
         [/\\[{}\[\]]/g, ""],
         [/\$(.*?)\$/g, "$1"],
         [/\\cdot/g, "⋅"],
@@ -18,9 +18,9 @@ function respClean(resp) {
         [/\\sigma/g, "σ"], [/\\phi/g, "φ"], [/\\omega/g, "ω"]
     ];
     replacements.forEach(([pattern, replacement]) => {
-        resp = resp.replace(pattern, replacement);
+        resp = resp.replace(pattern,replacement);
     });
-    return resp;
+    return resp.trim();
 }
 async function clipboardCopy(text) {
     try {
